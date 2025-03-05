@@ -15,15 +15,30 @@
 			"type": "object",
 			"title": "Advanced Formatter Settings",
 			"properties": {
-				"myFormatter.enable": {
+				"advancedFormatter.enable": {
 					"type": "boolean",
 					"default": true,
 					"description": "Enable/disable the formatter"
 				}
 			}
+		},
+		"commands": [],
+		"languages": [
+			{
+				"id": "javascript",
+				"extensions": [
+					".js"
+				]
+			}
+		],
+		"capabilities": {
+			"documentFormattingProvider": "true",
+			"documentRangeFormattingProvider": "true"
 		}
 	},
-	"activationEvents": [],
+	"activationEvents": [
+		"onLanguage:javascript"
+	],
 	"scripts": {
 		"compile": "tsc -p ./"
 	},
