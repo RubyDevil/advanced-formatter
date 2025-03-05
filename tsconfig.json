@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		// Use 'commonjs' for VS Code extensions
+		"module": "commonjs",
+		// Choose an appropriate target—ES2020 is common, but you can use ESNext, ES2019, etc.
+		"target": "es2020",
+		// Where compiled files go
+		"outDir": "out",
+		// Include libraries used by your extension
+		"lib": [
+			"ES2020"
+		],
+		// Strict checks for better code quality
+		"strict": true,
+		// Create source maps for debugging
+		"sourceMap": true
+	},
+	"include": [
+		"src"
+	]
+}
