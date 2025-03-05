@@ -1,5 +1,5 @@
 {
-	"name": "advanced-vscode-formatter",
+	"name": "advanced-formatter",
 	"displayName": "Advanced Formatter",
 	"description": "Allows configuring advanced code formatting options for each language.",
 	"version": "0.0.1",
@@ -7,57 +7,23 @@
 		"vscode": "^1.75.0"
 	},
 	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onLanguage:javascript",
-		"onCommand:myFormatter.applyFormatting"
+		"Formatters"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "myFormatter.applyFormatting",
-				"title": "Apply Advanced Formatting"
-			}
-		],
 		"configuration": {
 			"type": "object",
-			"title": "Advanced Formatter",
+			"title": "Advanced Formatter Settings",
 			"properties": {
-				"advancedFormatter.javascript.beforeParentheses.functionDeclaration": {
-					"type": "boolean",
-					"default": false,
-					"description": "Insert space before function declaration parentheses (JS)."
-				},
-				"advancedFormatter.javascript.beforeParentheses.functionCall": {
-					"type": "boolean",
-					"default": false,
-					"description": "Insert space before function call parentheses (JS)."
-				},
-				"advancedFormatter.javascript.beforeParentheses.if": {
+				"myFormatter.enable": {
 					"type": "boolean",
 					"default": true,
-					"description": "Insert space before 'if' parentheses (JS)."
-				},
-				"advancedFormatter.javascript.beforeParentheses.for": {
-					"type": "boolean",
-					"default": true,
-					"description": "Insert space before 'for' parentheses (JS)."
-				},
-				"advancedFormatter.javascript.aroundOperators.assignment": {
-					"type": "boolean",
-					"default": true,
-					"description": "Put spaces around assignment operators (e.g. =, +=, etc.) in JS."
-				},
-				"advancedFormatter.javascript.aroundOperators.logical": {
-					"type": "boolean",
-					"default": true,
-					"description": "Put spaces around logical operators (&&, ||) in JS."
+					"description": "Enable/disable the formatter"
 				}
 			}
 		}
 	},
+	"activationEvents": [],
 	"scripts": {
 		"compile": "tsc -p ./"
 	},
